@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,600;1,300&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+body {
+  background-color: #c0413b;
+}
+h1,
+h3,
+h4 {
+  text-align: center;
+}
+.nav {
+  display: flex;
+  height: 15vh;
+  background-color: #f7e5bf;
+  width: 100%;
+}
+
+.indice {
+  margin-left: 2%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.indice h3 {
+  margin-left: 12%;
+  display: flex;
+  justify-content: center;
+  width: 20vw;
+}
+.main {
+  margin: 2% auto;
+  width: 60vw;
+  height: auto;
+  background-color: #f7e5bf;
+  padding: 4%;
+  border-radius: 25px;
+}
+.main h1 {
+  background: #25cc0f;
+  background: linear-gradient(to bottom right, #25cc0f 0%, #3098ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.btnDiv {
+  width: 80vw;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1%;
+}
+.inpForm {
+  width: 50%;
+}
+.modal-body {
+  background-color: rgb(198, 198, 198);
+}
+.containerHTML {
+  width: 80vw;
+  margin: 0 auto;
+}
+.modal-body {
+  background-color: #f7e5bf;
+}
+.saveBtn {
+  background-color: #0b7849;
+  color: white;
+}
+.closeBtn {
+  background-color: #0b7849;
+  color: white;
+}
+.saveBtn:hover {
+  border: 1px solid #0b7849;
+}
+.formDiv {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2px;
+}
+.inpForm {
+  width: 18vw;
+  padding: 0.8%;
+}
+/* edita el lugar donde aparecen cargados los usuarios */
+.styleID,
+.deleteCss {
+  padding: 4%;
+  background-image: linear-gradient(to right top, #ffb27b, #ffb97d, #ffc080, #ffc683, #ffcd87);
+}
+
+.addHTML {
+  display: flex;
+  justify-content: center;
+}
+
+.noteInHTML {
+  padding: 1%;
+  margin: 1.5%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  width: 60%;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-image: linear-gradient(to right top, #ffb27b, #ffb97d, #ffc080, #ffc683, #ffcd87);
+}
+
+.deleteCss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+}
+.btnAddNote0 {
+  margin-right: auto;
+}
+#deleteItem,
+#editItem,
+.btnAddNote0 {
+  padding: 4%;
+  --green: #0b7849;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%, transparent 60%, rgba(27, 253, 156, 0.1) 100%);
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+#deleteItem:hover,
+#editItem:hover,
+.btnAddNote0:hover {
+  color: #82ffc9;
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+#deleteItem:before,
+#editItem:before,
+.btnAddNote0::before {
+  content: '';
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform 0.4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%, rgba(27, 253, 156, 0.1) 60%, transparent 100%);
+}
+
+#deleteItem:hover:before,
+#editItem:hover:before,
+.btnAddNote0:hover:before {
+  transform: translateX(15em);
+}
+
+/* REFERENCIAS DE CALIDAD DEL AIRE */
+section {
+  margin-top: 8vh;
+}
+
+#btnShowRef {
+  padding: 1.2%;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  background-color: #506432;
+  color: rgb(249, 231, 198);
+  border-radius: 16px;
+}
+#btnShowRef:hover {
+  background-color: #6c8744;
+  transition: 0.3s;
+}
+.indice h3 {
+  background-color: #ffcd87;
+  padding: 1.2%;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#showRef {
+  display: none;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  animation: showUp 1s ease-out;
+}
+@keyframes showUp {
+  from {
+    transform: translate(0, 100%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+.green {
+  background-color: rgb(0, 170, 0);
+  color: white;
+  border-radius: 8%;
+  padding: 25px;
+}
+.yellow {
+  background-color: rgb(255, 234, 0);
+  color: white;
+  border-radius: 8%;
+  padding: 2.2%;
+}
+.orange {
+  background-color: rgb(255, 123, 0);
+  color: white;
+  border-radius: 8%;
+  padding: 25px;
+}
+.red {
+  background-color: red;
+  color: white;
+  border-radius: 8%;
+  padding: 25px;
+}
+.purple {
+  background-color: purple;
+  color: white;
+  border-radius: 8%;
+  padding: 2.2%;
+}
+.maroon {
+  background-color: maroon;
+  color: white;
+  border-radius: 8%;
+  padding: 25px;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    height: auto;
+    padding: 2%;
+  }
+  .indice {
+    flex-direction: column;
+  }
+  .indice h3 {
+    width: auto;
+    padding: 2%;
+  }
+  .main {
+    width: 96vw;
+  }
+  #showRef {
+    width: 92vw;
+  }
+  .inpForm {
+    width: 60vw;
+  }
+  .noteInHTML {
+    grid-template-columns: 1fr;
+    width: auto;
+    padding: 2%;
+  }
+}

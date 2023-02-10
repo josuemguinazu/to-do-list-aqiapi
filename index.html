@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navDiv">
+        <nav class="nav">
+            <div class="indice">
+                <h4>Estado del aire en la ciudad de Rosario</h4>
+                <h3 id="aqiColor">Calidad del aire: <span id="aqiRos"></span></h3>
+                <button id="btnShowRef">Referencias</button>
+            </div>
+        </nav>
+    </div>
+    <div class="main">
+        <h1>Creador de Notas</h1>
+        <!-- Button trigger modal -->
+        <div class="btnDiv">
+            <button type="button" class="btn btnAddNote0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Agregar Nota
+            </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Agregar Nota</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" id="formulario">
+                            <div class="formDiv">
+                                <label for="date">Fecha</label>
+                                <input class="inpForm" type="date" name="date" id="inputDate">
+                            </div>
+                            <div class="formDiv">
+                                <label for="title">Título</label>
+                                <input class="inpForm" type="text" name="title" id="inputTitle">
+                            </div>
+                            <div class="formDiv">
+                                <label for="note">Tarea</label>
+                                <textarea class="inpForm" name="note" id="inputNote"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn closeBtn" data-bs-dismiss="modal">Cerrar !</button>
+                        <button type="button" class="btn  saveBtn" data-bs-dismiss="modal">Agregar !</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerHTML">
+            <div id="addHTML"></div>
+            <div id="addLS"></div>
+        </div>
+        <!-- api estado del aire en Rosario -->
+        <section>
+
+            <div id="showRef">
+                <p>Valores de referencia:</p>
+                <p class="green">0 to 50:
+                    La calidad del aire es satisfactoria y la contaminación del aire presenta poco o ningún riesgo.
+                </p>
+                <p class="yellow">51 to 100:
+                    La calidad del aire es aceptable. Sin embargo, puede haber un riesgo para algunas personas,
+                    particularmente aquellas que son inusualmente sensibles a la contaminación del aire.</p>
+                <p class="orange">101 to 150:
+                    Los miembros de grupos sensibles pueden experimentar efectos en la salud. El público en general
+                    es
+                    menos
+                    probable que se vea afectado.</p>
+                <p class="red">151 to 200: Algunos miembros del público en general pueden experimentar efectos en la
+                    salud;
+                    los
+                    miembros
+                    de grupos sensibles pueden experimentar efectos de salud más graves.</p>
+                <p class="purple">201 to 300: Alerta de salud: El riesgo de efectos en la salud aumenta para todos.
+                </p>
+                <p class="maroon">301 y superior: Advertencia sanitaria de condiciones de emergencia: todos tienen
+                    más
+                    probabilidades de
+                    verse afectados.</p>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
